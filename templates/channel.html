@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ channel }}
+{% endblock %}
+
+{% block scipts %}
+  <script type="text/javascript">
+    var channel = "{{ channel }}";
+  </script>
+  <script> var channels = {{ channels|safe }} </script>
+  <script> var comments = {{ comments|safe }} </script>
+  <script src="{{ url_for('static', filename='channel.js') }}"></script>
+
+{% endblock %}
+
+{% block main %}
+
+<div id="rightside" class="col-12 col-md-9 col-xl-10" style="text-align:center;">
+  <h3>This channel is {{ channel }}</h3>
+
+  <form id="commentForm" name="commentForm">
+    <div class="form-group">
+        <input autofocus autocomplete="off" type="text" placeholder="Add comment" class="form-control" id="commentText" name="commentText" rows="3" style="width:90%;" required></input>
+    </div>
+    <button id="submitComment" name="submitComment" class="btn btn-success w3-btn">Submit</button>
+  </form>
+
+  <div id="commentSection" class="container-fluid">
+  {% for comment in comments|reverse %}
+    <div class="row" style="width:95%; padding-top:10px;">
+      <div class="border rounded col-md-4" style="text-align: left;">
+        {{ comment["username"] }} @ {{ comment["timestamp"][:24] }}
+      </div>
+      <div class="border border-left-0 rounded col-md-7" style="text-align: left;">
+        {{ comment["commentText"] }}
+      </div>
+      <div class="container-fluid border border-left-0 rounded col-md-1">
+        <div class="row">
+          <div id={{ comment["id"] }} class="col-md-4">
+            {{- comment["votes"]|length -}}
+          </div>
+          <div class="UpvoteUnclicked" id="button-{{ comment["id"] }}" data-id={{ comment["id"] }}></div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

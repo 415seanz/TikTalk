@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block scipts %}
+<script> var channels = {{ channels|safe }} </script>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+
+<div class="seanDiv">
+  <form id="usernameForm" name="usernameForm" action="/">
+      <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" id="username" name="username" placeholder="Choose a username." type="text" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" id="submitUserName" class="btn btn-success w3-btn" value="Submit">
+      </div>
+  </form>
+
+  <div style="text-align:center;">
+    <h3></h3>
+    <img src="https://imgc.allpostersimages.com/img/print/u-g-Q1088LC0.jpg">
+  </div>
+</div>
+
+{% endblock %}

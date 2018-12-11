@@ -1,0 +1,139 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .purple
+{
+    color: purple;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main .h5div
+{
+  color: purple;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+
+    padding-bottom: 1px;
+  /* must be same height as the footer */
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.footer {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+/* I used some CSS code from https://www.w3schools.com/howto/howto_js_password_validation.asp to help me complete this section */
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: white;
+    color: #000;
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 5px 5px;
+    font-size: 16px;
+}
+
+#HomeIcon {
+  color:purple;
+}
+
+/* Add a green text color and a checkmark when the requirements are right
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2714";
+}
+
+Add a red text color and an "x" icon when the requirements are wrong
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\274C";
+}
+*/
+/* Create shadow behind button when hovered over */
+.w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+
+/*.dropdown_container {
+    width:300px;
+}
+
+.my_dropdown {
+    width:auto;
+}
+*/
+th {
+    background-color: purple;
+    color: white;
+}
+
+.input-center {
+    text-align: center;
+}
+
+.seanDiv {
+  padding-top: 20px;
+  width: 80%;
+}
+
+.UpvoteUnclicked {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid silver;
+  cursor: pointer;
+}
+
+.UpvoteClicked {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid lime;
+  cursor: pointer;
+}
