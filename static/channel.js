@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (jsonDict.name == channel) {
           comments = jsonDict.comments;
           var len = comments.length - 1;
-          var votes = comments[len].votes.length
+          var votes = comments[len].votes.length;
           //var str = '<div class="seanDiv" style="text-align:center;">User ' + jsonDict.comments[len].username + ' at ' + jsonDict.comments[len].timestamp + ' wrote: ' + jsonDict.comments[len].commentText + '</div>';
           var str = '<div class="row" style="width:95%; padding-top:10px;">'
             + '<div class="border col-md-4" style="text-align: left;">'
